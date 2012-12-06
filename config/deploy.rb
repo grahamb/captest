@@ -20,7 +20,7 @@ role :app, "canvas-at1.tier2.sfu.ca", "canvas-at2.tier2.sfu.ca", "canvas-at3.tie
 role :db,  "canvas-mt.tier2.sfu.ca"
 
 task :wtf, :roles => [:db] do
-  puts `hostname`
+  run "hostname"
 end
 
 
