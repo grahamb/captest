@@ -18,8 +18,8 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa_canvas")]
 role :app, "canvas-at1.tier2.sfu.ca", "canvas-at2.tier2.sfu.ca", "canvas-at3.tier2.sfu.ca"
 role :db,  "canvas-mt.tier2.sfu.ca"
 
-task :wtf, :roles => [:db] do
-  run "cat /home/canvasuser/hello"
+task :wtf, :roles => [:app, :db] do
+  run "hostname"
 end
 
 
