@@ -1,7 +1,7 @@
 require "bundler/capistrano"
-set :stages,        %w(production dev)
-set :default_stage, "production"
-require "capistrano/ext/multistage"
+# set :stages,        %w(production dev)
+# set :default_stage, "production"
+# require "capistrano/ext/multistage"
 
 set :application,   "captest"
 set :repository,    "git://github.com/grahamb/captest.git"
