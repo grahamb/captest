@@ -12,9 +12,8 @@ set :deploy_via,    :remote_cache
 set :deploy_to,     "/tmp/captest"
 set :use_sudo,      false
 set :deploy_env,    "test"
-# set :gateway,       "welcome.its.sfu.ca"
 ssh_options[:forward_agent] = true
-# ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa_canvas")]
+ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "id_rsa_canvas")]
 
 role :app, "canvas-at1.tier2.sfu.ca", "canvas-at2.tier2.sfu.ca", "canvas-at3.tier2.sfu.ca"
 role :db,  "canvas-mt.tier2.sfu.ca"
